@@ -10,7 +10,8 @@ app.get('/current/:city', function(req, res) {
   var conditions = '';
   request
     .get(requestURL)
-    .end(function(wunderRes){
+    .end(function(err, wunderRes){
+      if (err) return res.json(err);
       console.log(wunderRes);
       conditions = wunderRes; // this conditions is ending up empty string :-(
       res.json(conditions);
