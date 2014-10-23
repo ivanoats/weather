@@ -12,8 +12,7 @@ app.get('/current/:city', function(req, res) {
     .get(requestURL)
     .end(function(err, wunderRes){
       if (err) return res.json(err);
-      console.log(wunderRes);
-      conditions = wunderRes; // this conditions is ending up empty string :-(
+      conditions = JSON.parse(wunderRes.text);
       res.json(conditions);
     });
 });
