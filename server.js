@@ -10,15 +10,16 @@ app.get('/current/:city', function(req, res) {
   var conditions = '';
   request
     .get(requestURL)
-    .end(function(res){
-      console.log(res);
-      conditions = res;
+    .end(function(wunderRes){
+      console.log(wunderRes);
+      conditions = wunderRes; // this conditions is ending up empty string :-(
+      res.json(conditions);
     });
-  res.json(conditions);
 });
 
 var server = app.listen(process.env.PORT || 3000, function() {
-  var host = server.address().address;
+  // var host = server.address().address;
+  var host = process.env.IP;
   var port = server.address().port;
 
   console.log('Wunderground example app listening at http://%s:%s', host, port);
