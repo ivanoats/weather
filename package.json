@@ -1,0 +1,30 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Weather Underground API example",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivanoats/wundernode"
+  },
+  "keywords": [
+    "wunderground",
+    "node",
+    "weather",
+    "api",
+    "superagent"
+  ],
+  "author": "Ivan Storck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanoats/wundernode/issues"
+  },
+  "homepage": "https://github.com/ivanoats/wundernode",
+  "dependencies": {
+    "express": "^4.9.8",
+    "superagent": "^0.20.0"
+  }
+}
